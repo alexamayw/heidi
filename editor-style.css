@@ -1,0 +1,28 @@
+body#tinymce.wp-editor {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.7em;
+	color: #404040;
+	width: 730px;
+}
+
+body#tinymce.wp-editor p {
+	margin-bottom: 1.5em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+body#tinymce.wp-editor a {
+	color: #6ac5a2;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+body#tinymce.wp-editor blockquote {
+	margin: 0 2px 20px;
+	font-family: 'Libre Baskerville', Georgia, serif;
+	background: #bdddcf;
+	border-left: 8px solid #4e9f80;
+	padding: 8px 8px 2px 20px;
+	line-height: 2em;
+}
