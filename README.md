@@ -14,6 +14,9 @@ Heidi is a free WordPress theme with a fun, easily customizable color scheme. De
 
 ## Changelog
 
+### 1.0.8
+* footer.php - Add link to privacy policy page in footer, when a privacy policy page has been set
+
 ### 1.0.7
 * customizer.php - Fix html escaping for custom styles
 
