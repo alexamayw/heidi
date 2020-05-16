@@ -1,6 +1,6 @@
 # Heidi
 
-Heidi is a responsive theme designed and developed by [Alexa Weidinger](http://alexaweidinger.com) available for free download from the [WordPress Theme Directory](https://wordpress.org/themes/heidi/).
+Heidi is a responsive theme designed and developed by [Alexa Weidinger](http://alexaweidinger.com/themes) available for free download from the [WordPress Theme Directory](https://wordpress.org/themes/heidi/).
 
 Heidi is a free WordPress theme with a fun, easily customizable color scheme. Designed with a mobile-first approach and an emphasis on responsive design, Heidi is ready-for-use on a multitude of screen sizes and across devices.
 
@@ -13,6 +13,14 @@ Heidi is a free WordPress theme with a fun, easily customizable color scheme. De
 * Featured images
 
 ## Changelog
+
+### 2.0
+
+* style.css
+	- Various updates to ensure better display with Gutenberg: Alignments, Media, Blockquotes, Pullquotes, Horizontal rules, Buttons, Embeds/iframes
+	- Small comments padding fix
+* functions.php, editor-style.css
+	- Update Editor Styles for use with Gutenberg and Classic editor
 
 ### 1.0.8
 * footer.php - Add link to privacy policy page in footer, when a privacy policy page has been set

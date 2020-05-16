@@ -2,9 +2,11 @@
 Theme Name: Heidi
 Theme URI: http://alexaweidinger.com/heidi
 Author: Alexa Weidinger
-Author URI: http://alexaweidinger.com
+Author URI: http://alexaweidinger.com/themes
 Description: Heidi is a simple theme with a fun, easily customizable color scheme. Designed with a mobile-first approach and an emphasis on responsive design, Heidi is ready-for-use on a multitude of screen sizes and across devices.
-Version: 1.0.8
+Version: 2.0
+Tested up to: 5.4
+Requires PHP: 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: heidi
@@ -320,12 +322,32 @@ i {
 }
 
 blockquote {
-	margin: 0 2px 20px;
+	margin: 20px;
 	font-family: 'Libre Baskerville', Georgia, serif;
 	background: #bdddcf;
 	border-left: 8px solid #4e9f80;
-	padding: 8px 8px 2px 20px;
+	padding: 8px 8px 20px 20px;
 	line-height: 2em;
+}
+
+.is-style-large {
+	padding: 20px!important;
+}
+
+.wp-block-pullquote {
+	padding: 0 40px;
+}
+
+.wp-block-pullquote blockquote {
+	border-left: none;
+	border-top: 6px solid #4e9f80;
+	border-bottom: 6px solid #4e9f80;;
+}
+
+.wp-block-pullquote blockquote::before {
+	font-family: 'Fontawesome';
+	content: "\f10e";
+	padding-top: 20px;
 }
 
 address {
@@ -402,7 +424,7 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin: 40px 0;
 }
 
 ul,
@@ -432,9 +454,20 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 1em 0;
 }
 
 table {
@@ -513,6 +546,10 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+.wp-block-button {
+	margin: 20px 0;
 }
 
 /*--------------------------------------------------------------
@@ -803,23 +840,16 @@ a:active {
 9.0 - Alignments
 --------------------------------------------------------------*/
 
-.alignleft, .alignright {
-	display: inline;
-	margin: 3px;
+.alignleft {
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
 }
 
-@media all and (min-width: 400px) {
-	
-	.alignleft {
-		float: left;
-		margin-right: 1.5em;
-	}
-	
-	.alignright {
-		float: right;
-		margin-left: 1.5em;
-	}
-	
+.alignright {
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 .aligncenter {
@@ -827,10 +857,7 @@ a:active {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.alignnone {
-	display: inline;
+	margin-bottom: 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -1270,8 +1297,9 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-15.0 - Media
+15.0 Media
 --------------------------------------------------------------*/
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -1281,16 +1309,15 @@ a:active {
 	padding: 0;
 }
 
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-	max-width: 100%;
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
 }
 
 /*--------------------------------------------------------------
-15.1 - Captions
+15.1 Captions
 --------------------------------------------------------------*/
+
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
@@ -1298,77 +1325,68 @@ object {
 
 .wp-caption img[class*="wp-image-"] {
 	display: block;
-	margin: 0 auto;
-}
-
-.wp-caption-text {
-	text-align: center;
-	font-size: .85em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 }
 
+.wp-caption-text {
+	text-align: center;
+}
+
 /*--------------------------------------------------------------
-15.2 - Galleries
+15.2 Galleries
 --------------------------------------------------------------*/
+
 .gallery {
 	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 1.5em;
 }
 
 .gallery-item {
-	display: inline;
+	display: inline-block;
 	text-align: center;
-	vertical-align: top;
-	padding: 50px;
 	width: 100%;
 }
 
-@media all and (min-width: 400px) {
-	
-	.gallery-item {
-		display: inline-block;
-		padding: inherit;
-		max-width: 80%;
-	}
+.gallery-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
 
-	.gallery-columns-2 .gallery-item {
-		max-width: 50%;
-	}
-	
-	.gallery-columns-3 .gallery-item {
-		max-width: 33.33%;
-	}
-	
-	.gallery-columns-4 .gallery-item {
-		max-width: 25%;
-	}
-	
-	.gallery-columns-5 .gallery-item {
-		max-width: 20%;
-	}
-	
-	.gallery-columns-6 .gallery-item {
-		max-width: 16.66%;
-	}
-	
-	.gallery-columns-7 .gallery-item {
-		max-width: 14.28%;
-	}
-	
-	.gallery-columns-8 .gallery-item {
-		max-width: 12.5%;
-	}
-	
-	.gallery-columns-9 .gallery-item {
-		max-width: 11.11%;
-	}
-	
-	.gallery-caption {
-		display: block;
-	}
+.gallery-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
 
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+	grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+	grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+	display: block;
 }
 
 /*--------------------------------------------------------------
