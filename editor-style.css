@@ -1,28 +1,44 @@
-body#tinymce.wp-editor {
+body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	line-height: 1.7em;
 	color: #404040;
-	width: 730px;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
-body#tinymce.wp-editor p {
+p {
 	margin-bottom: 1.5em;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
-body#tinymce.wp-editor a {
-	color: #6ac5a2;
+a {
 	font-weight: bold;
 	text-decoration: none;
 }
 
-body#tinymce.wp-editor blockquote {
+blockquote {
 	margin: 0 2px 20px;
 	font-family: 'Libre Baskerville', Georgia, serif;
-	background: #bdddcf;
-	border-left: 8px solid #4e9f80;
+	border-left: 8px solid #444;
 	padding: 8px 8px 2px 20px;
 	line-height: 2em;
+}
+
+.is-style-large {
+	padding: 20px!important;
+}
+
+.wp-block-pullquote {
+	padding: 0 40px;
+	border-top: none;
+	border-bottom: none;
+}
+
+.wp-block-pullquote blockquote {
+	border-left: none;
+	border-top: 6px solid #444;
+	border-bottom: 6px solid #444;
+	padding: 20px 0;
 }

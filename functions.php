@@ -75,8 +75,9 @@ function heidi_setup() {
 		'default-image' => '',
 	) ) );
 	
-	// Add a custom stylesheet to the editor
-	add_editor_style();
+	// Editor Styles
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'editor-style.css' );
 }
 endif; // heidi_setup
 add_action( 'after_setup_theme', 'heidi_setup' );
